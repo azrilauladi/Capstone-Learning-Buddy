@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Buddy - Temukan Teman Belajarmu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Learning<span>Buddy</span>.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#buddies">Cari Buddy</a></li>
+            <li><a href="#features">Fitur</a></li>
+            <li><a href="#contact" class="btn-login">Masuk</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Belajar Jadi Lebih Seru Bersama <span>Partner</span></h1>
+            <p>Temukan teman belajar yang satu frekuensi, berbagi materi, dan raih target belajarmu bersama-sama.</p>
+            <a href="#buddies" class="btn-primary">Cari Partner Sekarang</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://img.freepik.com/free-vector/online-learning-concept-illustration_114360-4682.jpg?w=740" alt="Ilustrasi Belajar">
+        </div>
+    </header>
+
+    <section id="buddies" class="container">
+        <div class="section-title">
+            <h2>Temukan Buddy</h2>
+            <p>Pilih topik yang ingin kamu pelajari</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari skill (misal: Python, Desain, Math)...">
+            <button onclick="filterBuddies()">Cari</button>
+        </div>
+
+        <div class="buddy-grid" id="buddyContainer">
+            </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="section-title">
+            <h2>Kenapa Learning Buddy?</h2>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🎯 Fokus Target</h3>
+                <p>Tentukan target belajar mingguan bersama partnermu.</p>
+            </div>
+            <div class="feature-card">
+                <h3>💬 Diskusi Langsung</h3>
+                <p>Fitur chat realtime untuk tanya jawab materi.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🚀 Level Up</h3>
+                <p>Dapatkan badge dan sertifikat jika target tercapai.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Learning Buddy. Dibuat dengan ❤️ untuk Pelajar.</p>
+    </footer>
+
+    <button class="chatbot-toggler" onclick="toggleChat()">
+        <span class="icon">🤖</span>
+    </button>
+
+    <div class="chatbot-window">
+        <header>
+            <h2>AI Buddy</h2>
+            <span class="close-btn" onclick="toggleChat()">✕</span>
+        </header>
+        <ul class="chatbox" id="chatbox">
+            <li class="chat incoming">
+                <span class="bot-icon">🤖</span>
+                <p>Halo! Saya AI Learning Buddy. Butuh rekomendasi teman belajar atau materi?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea id="chatInput" placeholder="Tanya sesuatu..." required></textarea>
+            <span id="sendBtn" class="send-btn">➤</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
